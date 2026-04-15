@@ -1,7 +1,6 @@
 package org.example;
 
-import org.example.config.HibernateConfig;
-import org.example.entity.Product;
+
 import org.example.service.ProductService;
 import org.example.service.serviceImpl.ProductServiceImpl;
 
@@ -12,6 +11,7 @@ import org.example.service.serviceImpl.ProductServiceImpl;
 public class App 
 {
     public static void main( String[] args ){
+        ProductService productService = new ProductServiceImpl();
 
     }
 }
