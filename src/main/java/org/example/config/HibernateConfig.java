@@ -10,6 +10,7 @@ import java.util.Properties;
 public class HibernateConfig {
 public static SessionFactory getSession(){
     Properties properties = new Properties();
+    properties.put(Environment.JAKARTA_JDBC_DRIVER,"org.postgresql.Driver");
     properties.put(Environment.JAKARTA_JDBC_URL,"jdbc:postgresql://localhost:5432/postgres");
     properties.put(Environment.JAKARTA_JDBC_USER,"postgres");
     properties.put(Environment.JAKARTA_JDBC_PASSWORD,"1111");
