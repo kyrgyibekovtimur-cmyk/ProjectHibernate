@@ -70,7 +70,7 @@ private final SessionFactory sessionFactory = HibernateConfig.getSession();
     public List<Product> getProductsByCategory(String category) {
 Session session =sessionFactory.openSession();
 session.beginTransaction();
-List<Product> products=session.createQuery("select p from Product as p where p.name=:name",Product.class).setParameter("name",category).getResultList();
+List<Product>products = session.createQuery("select p from Product as p where p.category=:category", Product.class).setParameter("category", category).getResultList();
 session.getTransaction().commit();
 session.close();
 return products;
